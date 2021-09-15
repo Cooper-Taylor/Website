@@ -80,10 +80,18 @@
         <div>There are 3 types of selectors in CSS:</div>
         <ol>
             <li><h4>The first one is an element selector. It uses the specific element of a html tag to apply styles to them. For example, the style sheet is selecting all h4 tags and coloring them red.</h4></li>
-            <li class="green">This is colored because of a class selector! to create a class in the style area, use ."name of class"{}, then to apply it to text, use 'class="name of class"'</li>
+            <li class="green">This is colored because of a class selector! to create a class in the style area, use ."nameofclass"{}, then to apply it to text, use 'class="nameofclass"'. You can apply multiple classes to a specific element by putting spaces between them but having them in the same set of quotations!</li>
             <li id="purple">The last selector is an ID selector! It uses the id of a specific tag from the html document to style that text. As per usual, define the tag, and then to call it, preceed the tag name with a #.</li>
+            <li>This is just an extra one, but you can combine these selectors into one by combining them with a comma! Example: div, #name {color: blue;}</li>
         </ol>
+        <p>Just like with most logic, there is an 'and' or an 'or' with selectors. You can have an element.class and that will select a specific element with that class.
+            You can then have select every child element within a larger element. For example section > p {} would affect all p elements IMMEDIATELY inside a section element, but section p{} would effect every p element, regardless of how embedded, within a section element.
+            These do not just work with elements, they can work with classes or ids as well!
+            To test for multiple class tags in an element within a selector do .class1.class2{}
+            Check W3Schools for more ways to combine selectors!
+        </p>
+        <a href="selectors.html" title="link to selectors page"><div>Click this link to see how powerful selectors are!</div></a>
     </section>
-    
+    <a href="french.html" title="To French Link" style="font-size: 20px; text-decoration: none; color: rgb(0, 89, 255) ">Click here to go study French!</a>
 </body>
 </html>

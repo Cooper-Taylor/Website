@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "utf-8">
+    <title>Selectors</title>
+    <style>
+        .NoListStyle{
+            list-style: none;
+        }
+        li .button, a:visited, a:link{
+            text-decoration: none;
+            background-color: green;
+            border: 1px solid black;
+            color: black;
+            display: block;
+            width: 200px;
+            text-align: center;
+            margin-bottom: 5px;
+            margin-right: 800px;
+            margin-left: 800px;
+            box-sizing: border-box;
+        }
+        a:hover, a:active{
+            background-color: red;
+            color: purple;
+            border: 2px solid black;
+            font-size: 20px;
+            width: 220px;
+            box-sizing: border-box; 
+            margin-left: 792px;
+        }
+        section.chart div:nth-child(odd){
+            background: grey;
+            text-align: center;
+        }
+        section.chart div{
+            text-align: center;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #Box{
+            background-color: blue;
+            padding: 10px;
+            border: 3px solid black;
+            margin-left: 50px;
+            margin-right:50px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            box-sizing: border-box; 
+        }
+        #Text{
+            background-color: green;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo-Class Selectors</h1>
+    <header>
+        <ul class="Button NoListStyle">
+            <li><a href="index.html" title="Go to Main Page">Return to Main Page!</a></li>
+            <li><a href="randomlink.html" title="Go to Random Link Page">Go to Random Link Page!</a></li>
+        </ul>
+    </header>
+    <p>This is some text!</p>
+    <section class="chart">
+        <div>Hello and welcome to the new chart!</div>
+        <div>This chart is extremely cool! </div>
+        <div>Check out some of the satisfied customers:</div>
+        <div>"This is the greatest chart ever"</div>
+        <div>"What a wonderful chart" </div>
+        <div>"I've never seen such a great chart" </div>
+    </section>
+    <footer>
+        <p>For real websites, make sure to have a separate document as a style sheet. You can import this onto every different index in a website by doing the following:</p>
+        <div>Put a 'link rel="stylesheet" href="document.css"' in the head of each document</div>
+    </footer>
+    <div id="Box">
+        <div id="Text"> Random Text</div>
+    </div>
+</body>
+</html>
