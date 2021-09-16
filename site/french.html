@@ -17,7 +17,7 @@
             user-select: none;
             -webkit-user-select: none;
             -khtml-user-select: none;
-            -moz-user-select: none; 
+            -moz-user-select: none;
         }
         .a:hover{
             background-color: white;
@@ -33,6 +33,39 @@
             text-align: center;
             font-size: 18px;
         }
+        .markerindex{
+            display: grid;
+            grid-template-columns: 250px 250px 250px 250px;
+            justify-content: center;
+            align-content: center;
+            grid-gap: 10px;
+            background-color: rgb(0, 66, 153);
+            grid-template-rows: 80px 80px 80px;
+            
+            grid-template-areas: 
+            'header header header header'
+            'phrases numbers time classroom'
+            'etre avoir genders_plurality avoir_w_adj';
+        }
+        a:visited, a:link, a:hover{
+            text-decoration: none;
+            color: rgb(17, 0, 255);
+        }
+        .header{grid-area: header;
+            color: rgb(17,0,255)
+        }
+        .phrases{grid-area: phrases;}
+        .numbers{grid-area: numbers;}
+        .time{grid-area: time;}
+        .classroom{grid-area: classroom;}
+        .etre{grid-area: etre;}
+        .avoir{grid-area: avoir;}
+        .genders_plurality{grid-area: genders_plurality;}
+        .avoir_w_adj{grid-area: avoir_w_adj;}
+        .markerindex > *{
+            background-color: rgb(0, 119, 255);
+            font-size: 30px;
+        }
         h2{
             margin: 5px;
             padding: 0px;
@@ -45,8 +78,14 @@
 </head>
 <body>
     <h1>Time to Study some French!</h1>
-    <header>Hover over the definition in order to reveal it! Like old fashion flash cards :)</header>
-    <h2>Phrases!</h2>
+    <header style="padding-bottom: 12px;">Hover over the definition in order to reveal it! Like old fashion flash cards :)</header>
+    <section class="markerindex">
+        <div class="header" style="font-size: 40px;">Index for Specific Searches on French Page!</div>
+        <a href="#Phrases" class="phrases"><div>Link to Phrases</div></a><a href="#Numbers" class="numbers"><div>Link to Numbers</div></a><a href="#Time" class="time"><div>Link to Time</div></a><a href="#Classroom" class="classroom"><div>Link to Classroom</div></a>
+        <a href="#Etre" class="etre"><div>Link to Etre</div></a><a href="#Avoir" class="avoir"><div>Link to Avoir</div></a><a href="#Genders_Plurality" class="genders_plurality"><div>Link to Gender and Plurality</div></a><a href="#Avoir_w_adj" class="avoir_w_adj"><div>Link to Avoir with Adjectives</div></a>
+    </section>
+
+    <h2 id="Phrases">Phrases!</h2>
     <section class="container">
         <div class="q">Salut!</div>
         <div class="a">Hello! - informal</div>
@@ -101,7 +140,7 @@
         <div class="q">A la semaine prochaine!</div>
         <div class="a">See you next week!</div>
     </section>
-    <h2>Numbers!</h2>
+    <h2 id="Numbers">Numbers!</h2>
     <section class="container">
         <div class="q">1</div>
         <div class="a">Un</div>
@@ -150,7 +189,7 @@
         <div class="q">60</div>
         <div class="a">Soixante</div>
     </section>
-    <h2>Time!</h2>
+    <h2 id="Time">Time!</h2>
     <p>Things to Note For Time!</p>
         <div>To say the Date, month and year of birth use: le + day of the month + name of month + year</div>
         <div>use the preposition 'en' for hiver/automne/été. This is because of the vowels</div>
@@ -257,7 +296,7 @@
         <div class="q">And you</div>
         <div class="a">Et toi</div>
     </section>
-    <h2>Classroom Materials!</h2>
+    <h2 id="Classroom">Classroom Materials!</h2>
     <section class="container">
         <div class="q">A notebook</div>
         <div class="a">Un cahier</div>
@@ -294,7 +333,7 @@
         <div class="q">The desk</div>
         <div class="a">Le pupitre</div>
     </section>
-    <h2>Conjugations of être</h2>
+    <h2 id="Etre">Conjugations of être</h2>
     <section class="container"> 
         <div class="q">I am</div>
         <div class="a">Je suis</div>
@@ -309,7 +348,7 @@
         <div class="q">They are</div>
         <div class="a">Ils/elles sont</div>
     </section>
-    <h2>Conjugation of avoir</h2>
+    <h2 id="Avoir">Conjugation of avoir</h2>
     <section class="container">
         <div class="q">I have</div>
         <div class="a">J'ai</div>
@@ -324,11 +363,38 @@
         <div class="q">They have</div>
         <div class="a">ils/elles ont</div>
     </section>
-    <h2>Genders!</h2>
+    <h2 id="Genders_Plurality">Genders!</h2>
     <img src="Genders.jpg" alt="Picture of French Genders" width="600px" height="400px">
     <h2>Plurality!</h2>
     <img src="Plural.jpg" alt="Picture of French plurality rules" width="600px" height="400px">
-    <h2>Avoir Combined with Adjectives!</h2>
+    <h2 id="Avoir_w_adj">Avoir Combined with Adjectives!</h2>
+    <section class="container"> 
+        <div class="q">I am __ years old!</div>
+        <div class="a">J'ai __ an(s)</div>
+        <div class="q">To feel hot</div>
+        <div class="a">Avoir chaud</div>
+        <div class="q">To feel cold</div>
+        <div class="a">Avoir froid</div>
+        <div class="q">To be hurt/feel pain</div>
+        <div class="a">Avoir mal</div>
+        <div class="q">To be hungry</div>
+        <div class="a">Avoir faim</div>
+        <div class="q">To be thirsty</div>
+        <div class="a">Avoir soif</div>
+        <div class="q">To be right</div>
+        <div class="a">Avoir raison</div>
+        <div class="q">To be wrong</div>
+        <div class="a">Avoir tort</div>
+        <div class="q">To feel ashamed</div>
+        <div class="a">Avoir honte</div>
+        <div class="q">To be afraid</div>
+        <div class="a">Avoir peur</div>
+        <div class="q">Avoir de la chance</div>
+        <div class="a">To be lucky</div>
+        <div class="q">To feel/to be sleepy</div>
+        <div class="a">Avoir sommeil</div>
+    </section>
+
     <a href="index.html" title="Link back to first page"><footer>Click here to go back to the main page!</footer></a>
 </body>
 </html>
