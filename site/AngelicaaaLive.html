@@ -15,12 +15,16 @@
             background: #129ada;
             display: grid;
             grid-template-columns: 15% 15% 15% 15% 15%;
+            grid-template-rows: 5em;
             justify-content: center;
             align-content: center;
             grid-gap: 5%;
             grid-template-areas:
             'Youtube Twitch Instagram Email Discord';
             height: 80px;
+        }
+        #headerbox > *{
+            padding-top: 14px;
         }
         .logo{
             text-align: center;
@@ -38,6 +42,7 @@
         }
         #header{
             font-size: 80px;
+            
         }
         body{
             background: #ffca74;
@@ -47,35 +52,65 @@
             height: 280px;
             position: relative;
         }
-
+        h2{
+            font-size: 50px;
+        }
+        body{
+            background-image: url("Angelicaaabackground.png");
+            background-size: 1500px;
+        }
         .Youtube{grid-area: Youtube;}
         .Twitch{grid-area: Twitch;}
         .Instagram{grid-area: Instagram;}
         .Email{grid-area: Email;}
         .Discord{grid-area: Discord;}
+
+        @keyframes animation{
+            from{background-color: #129ada}
+            to{background-color: #076fa0c5}
+        }
+        .animation:hover{
+            background: #129ada;
+            animation: animation 0.3s;
+            transition-timing-function: cubic-bezier(0.2,0.5,0.7,1);
+        }
+        .animation:hover{
+            background-color: #076fa0c5;
+        }
     </style>
 </head>
 <body>
     <div style = "background: #129ada;"><div style="width:50%; display: inline-block;"><h1 id="header" style="padding-bottom: 20px; padding-top: 15px; color: white;">AngelicaaaLive</h1></div></div>
-    <div id="headerbox"> 
-        <a href="#Youtube" class="Youtube"><div><logo class="logo">Youtube</logo></div></a>
-        <a href="#Twitch" class="Twitch"><div><logo class="logo">Twitch</logo></div></a>
-        <a href="#Instagram" class="Instagram"><div><logo class="logo">Instagram</logo></div></a>
-        <a href="#Email" class="Email"><div><logo class="logo">Email</logo></div></a>
-        <a href="#Discord" class="Discord"><div><logo class="logo">Discord</logo></div></a>
+    <div id="headerbox" style="border-bottom: 5px #076fa0c5 solid;"> 
+        <a href="#Youtube" class="Youtube animation"><div><logo class="logo">Youtube</logo></div></a>
+        <a href="#Twitch" class="Twitch animation"><div><logo class="logo">Twitch</logo></div></a>
+        <a href="#Instagram" class="Instagram animation"><div><logo class="logo">Instagram</logo></div></a>
+        <a href="#Email" class="Email animation"><div><logo class="logo">Email</logo></div></a>
+        <a href="#Discord" class="Discord animation"><div><logo class="logo">Discord</logo></div></a>
     </div>
     <div id="aboutmebox">
         <div style="position: absolute; left: 8%; top: 25%; padding-right: 8px;"><img src="Lion.png" width="200px" height="200px" alt="Picture of Profile"></div>
-        <div><h2 style="font-size: 50px;">About Me!</h2></div>
-        <div><p style="position: absolute; left: 25%; top: 38%; font-size: 28px; width: 60%;">Hello! My name is Angelicaaa I am a Minecraft, Roblox, and Indie game streamer. Streaming has always been a dream of mine, and I look forward to working on growing my Twitch and community!</p></div>
+        <div><h2>About Me!</h2></div>
+        <div><p style="position: absolute; left: 25%; top: 38%; font-size: 2em; width: 60%;">Hello! My name is Angelicaaa I am a Minecraft, Roblox, and Indie game streamer. Streaming has always been a dream of mine, and I look forward to working on growing my Twitch and community!</p></div>
     </div>
-    <div id="Youtube">
+    
+    
+    
+    <div id="Youtube" style="Position: relative; height: 300px; margin-top: 250px;">
+        <a href="https://www.youtube.com/channel/UCc7Y8CFp27CocYRDIqoQ2Xg/featured" style="Position: absolute; left: 42%; top: 65%;"><img src="youtube_trans.png" width=200px height=225px alt="youtube link"></a>
+        <div><h2>Check out my Youtube!</h2></div>
+        <div style="font-size: 2em; position: absolute; left: 25%; width: 50%;">I am getting ready to release videos on Youtube as well as posting popular Twitch streams onto the channel as well! Go check it out and subscribe!</div>
+    </div> 
+    <div id="Twitch" style="Position: relative;">
 
     </div>
-    <div id="Twitch">
+    <div id="Instagram" style="Position: relative;">
 
     </div>
-    <div id="Instagram">
+    <div id="Mail" style="Position: relative;">
+
+    </div>
+    <div id="Discord" style="Position: relative;">
 
     </div>
 
