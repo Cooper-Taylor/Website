@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="_viewport_" content="Width=device-width, initial-scale=1">
     <title>AngelicaaaLive</title>
     <link href="Stylesheet.css" rel="stylesheet">
     <style>
@@ -60,7 +61,7 @@
             font-size: 50px;
         }
         body{
-            background-image: url("Angelicaaabackground.png");
+            background-image: url("Angelicaaabackground.small.png");
             background-size: 3000px;
         }
         .Youtube{grid-area: Youtube;}
@@ -81,29 +82,127 @@
         .animation:hover{
             background-color: #076fa0c5;
         }
+        .sizechange{
+            font-size: 2.7vw;
+        }
+        /*Testing Media stuff for mobile users and small screen users*/
+        @media (max-width: 1200px) {
+            .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .media-image-sm, .media-image-lg{
+                float: left;
+            }
+            .col-sm-1 {
+                width: 8.33%;
+            } 
+            .col-sm-2 {
+                width: 16.66%;
+            }
+            .col-sm-3 {
+                width: 25%;
+            }
+            .col-sm-4 {
+                width: 33.33%;
+            }
+            .col-sm-5 {
+                width: 41.66%
+            }
+            .col-sm-6 {
+                width: 50%;
+            }
+            .col-sm-7 {
+                width: 58.33%;
+            }
+            .col-sm-8 {
+                width: 66.66%;
+            }
+            .col-sm-9 {
+                width: 74.99%;
+            }
+            .col-sm-10 {
+                width: 83.33%;
+            }
+            .col-sm-11 {
+                width: 91.66%;
+            }
+            .col-sm-12{
+                width: 100%;
+            }
+            .media-image-lg{
+                display: none;
+                margin: 0 auto;
+            }
+        }
+        @media (min-width: 1201px) {
+            .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .media-image-lg, .media-image-sm{
+                float: left;
+            }
+            .col-lg-1 {
+                width: 8.33%;
+            } 
+            .col-lg-2 {
+                width: 16.66%;
+            }
+            .col-lg-3 {
+                width: 25%;
+            }
+            .col-lg-4 {
+                width: 33.33%;
+            }
+            .col-lg-5 {
+                width: 41.66%
+            }
+            .col-lg-6 {
+                width: 50%;
+            }
+            .col-lg-7 {
+                width: 58.33%;
+            }
+            .col-lg-8 {
+                width: 66.66%;
+            }
+            .col-lg-9 {
+                width: 74.99%;
+            }
+            .col-lg-10 {
+                width: 83.33%;
+            }
+            .col-lg-11 {
+                width: 91.66%;
+            }
+            .col-lg-12{
+                width: 100%;
+            }
+            .media-image-lg{
+                padding-left: 8.33%
+            }
+            .media-image-sm{
+                display: none;
+                margin: 0 auto;
+            }
+        }
     </style>
 </head>
 <body>
-    <div style = "background: #129ada;"><div style="width:50%; display: inline-block;"><h1 id="header" style="padding-bottom: 20px; padding-top: 15px; color: white;">AngelicaaaLive</h1></div></div>
+    <div style = "background: #129ada;"><div style="width:50%; display: inline-block;"><h1 id="header" style="padding-bottom: 20px; padding-top: 15px; color: white; font-size: 6vw;">AngelicaaaLive</h1></div></div>
     <div id="headerbox" style="border-bottom: 5px #076fa0c5 solid;"> 
-        <a href="#Youtube" class="Youtube animation"><div><logo class="logo">Youtube</logo></div></a>
-        <a href="#Twitch" class="Twitch animation"><div><logo class="logo">Twitch</logo></div></a>
-        <a href="#Instagram" class="Instagram animation"><div><logo class="logo">Instagram</logo></div></a>
-        <a href="#Email" class="Email animation"><div><logo class="logo">Email</logo></div></a>
-        <a href="#Discord" class="Discord animation"><div><logo class="logo">Discord</logo></div></a>
+        <a href="#Youtube" class="Youtube animation"><div><logo class="logo sizechange">Youtube</logo></div></a>
+        <a href="#Twitch" class="Twitch animation"><div><logo class="logo sizechange">Twitch</logo></div></a>
+        <a href="#Instagram" class="Instagram animation"><div><logo class="logo sizechange">Instagram</logo></div></a>
+        <a href="#Email" class="Email animation"><div><logo class="logo sizechange">Email</logo></div></a>
+        <a href="#Discord" class="Discord animation"><div><logo class="logo sizechange">Discord</logo></div></a>
     </div>
+
     <div id="aboutmebox">
-        <div style="position: absolute; left: 8%; top: 25%; padding-right: 8px;"><img src="Lion.png" width="200px" height="200px" alt="Picture of Profile"></div>
-        <div><h2>About Me!</h2></div>
-        <div><p style="position: absolute; left: 25%; top: 38%; font-size: 2em; width: 55%;">Hello! My name is Angelicaaa I am a Minecraft, Roblox, and Indie game streamer. Streaming has always been a dream of mine, and I look forward to working on growing my Twitch and community!</p></div>
+        <div class="col-sm-1 col-lg-1 media-image-lg" style="padding-top: 8.33%;"><img src="Lion.png" width="200px" height="auto" alt="Picture of Profile"></div>
+        <div class= "col-sm-12 col-lg-8"><h2 style="font-size: 4vw; padding-bottom: 5%;">About Me!</h2> </div>
+        <div class= "col-sm-10 col-lg-7"><p style="font-size: 2.5vw; padding-left: 16.66%;">Hello! My name is Angelicaaa I am a Minecraft, Roblox, and Indie game streamer. Streaming has always been a dream of mine, and I look forward to working on growing my Twitch and community!</p></div>
+        <div class="media-image-sm" style="padding-top: 8.33%; clear: right; float: none;"><img src="Lion.png" width="200px" height="auto" alt="Picture of Profile"></div>
     </div>
-    
     
     
     <div id="Youtube" style="Position: relative; height: 300px; margin-top: 250px;">
         <a href="https://www.youtube.com/channel/UCc7Y8CFp27CocYRDIqoQ2Xg/featured" target ="_blank" style="Position: absolute; left: 42%; top: 65%;"><img src="youtube_trans.png" width=200px height=225px alt="youtube link"></a>
         <div><h2>Check out my Youtube!</h2></div>
-        <div style="font-size: 2em; position: absolute; left: 25%; width: 50%;">I am getting ready to release videos on Youtube as well as posting popular Twitch streams onto the channel as well! Go check it out and subscribe!</div>
+        <div style="font-size: 2vw; position: absolute; left: 25%; width: 50%;">I am getting ready to release videos on Youtube as well as posting popular Twitch streams onto the channel as well! Go check it out and subscribe!</div>
     </div> 
     <div id="Twitch" style="Position: relative;">
 
