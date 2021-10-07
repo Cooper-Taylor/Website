@@ -70,6 +70,21 @@
         .Email{grid-area: Email;}
         .Discord{grid-area: Discord;}
 
+        .iframe-container{
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; 
+            height: 0;
+        }
+        .iframe-container iframe{
+            position: absolute;
+            top:40%;
+            left: 30%;
+            width: 40%;
+            height: 50%;
+            
+        }
+
         @keyframes animation{
             from{background-color: #129ada}
             to{background-color: #076fa0c5}
@@ -87,7 +102,7 @@
         }
         /*Testing Media stuff for mobile users and small screen users*/
         @media (max-width: 1200px) {
-            .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .media-image-sm, .media-image-lg, .text-sm, .title-sm, #Youtube{
+            .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .media-image-sm, .media-image-lg, .text-sm, .title-sm, #Youtube, .iframe-container iframe{
                 float: left;
             }
             .col-sm-1 {
@@ -139,9 +154,12 @@
             #Youtube{
                 padding-top: 60%;
             }
+            .iframe-container iframe{
+                top: 80%;
+            }
         }
         @media (min-width: 1201px) {
-            .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .media-image-lg, .media-image-sm, .text-lg, .title-lg, #Youtube{
+            .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .media-image-lg, .media-image-sm, .text-lg, .title-lg, #Youtube, .iframe-container iframe{
                 float: left;
             }
             .col-lg-1 {
@@ -196,6 +214,9 @@
             #Youtube{
                 padding-top: 16%;
             }
+            .iframe-container iframe{
+                top: 40%;
+            }
         }
     </style>
 </head>
@@ -218,11 +239,9 @@
 
     <div id="Youtube">
         <div class= "col-sm-12 col-lg-12 title-sm title-lg"><h2 style="padding-bottom: 2.5%;">Check out my Youtube!</h2> </div>
-        <div class= "col-sm-10 col-lg-10 text-sm text-lg"><p style="padding-left: 16.66%;">I am getting ready to release videos on Youtube as well as posting popular Twitch streams onto the channel! Go check it out and subscribe!</p></div>
-        <div class= "col-sm-10 col-lg-10 text-sm text-lg"><p style="padding-left: 16.66%; padding-top: 2%; font-size: 2vw;">Click the image below to check out my Youtube!</p></div>
-        <a href="https://www.youtube.com/channel/UCc7Y8CFp27CocYRDIqoQ2Xg/featured" target ="_blank"><div style="clear: right; float: none; padding-right: 6%;"><img src="youtube_trans.png" width="300px" height="auto" alt="Youtube Link"></div></a>
+        <div class= "col-sm-10 col-lg-10 text-sm text-lg"><p style="padding-left: 16.66%;">I am getting ready to release videos&nbsp;on Youtube as well as posting popular Twitch streams onto the channel! Go check it out! </p></div>
+        <div class="iframe-container"><iframe height="315" width="560" src="http://www.youtube.com/embed/videoseries?list=UUc7Y8CFp27CocYRDIqoQ2Xg" frameborder="0" allowfullscreen></iframe></div>
     </div>
-    
     <div id="Twitch" style="Position: relative;">
 
     </div>
