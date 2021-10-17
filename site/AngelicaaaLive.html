@@ -22,7 +22,7 @@
             align-content: center;
             grid-gap: 5%;
             grid-template-areas:
-            'Youtube Twitch Instagram Email Discord';
+            'Youtube Twitch Discord Email Donation';
             height: 80px;
         }
         #headerbox > *{
@@ -51,6 +51,8 @@
         }
         html, body{
             scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
         }
         #aboutmebox{
             margin-top: 180px;
@@ -67,9 +69,9 @@
         }
         .Youtube{grid-area: Youtube;}
         .Twitch{grid-area: Twitch;}
-        .Instagram{grid-area: Instagram;}
-        .Email{grid-area: Email;}
         .Discord{grid-area: Discord;}
+        .Email{grid-area: Email;}
+        .Donation{grid-area: Donation;}
 
         .iframe-container{
             position: relative;
@@ -103,7 +105,7 @@
         }
         /*Testing Media stuff for mobile users and small screen users*/
         @media (max-width: 1200px) {
-            .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .media-image-sm, .media-image-lg, .text-sm, .title-sm, #Youtube, .iframe-container iframe, #Twitch, #aboutmebox, #TwitchImage{
+            .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .media-image-sm, .media-image-lg, .text-sm, .title-sm, #Youtube, .iframe-container iframe, #Twitch, #aboutmebox, #TwitchImage, #Instagram{
                 float: left;
             }
             .col-sm-1 {
@@ -164,9 +166,12 @@
             #TwitchImage{
                 padding-top: 8.33%;
             }
+            #Instagram{
+                width: 100;
+            }
         }
         @media (min-width: 1201px) {
-            .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .media-image-lg, .media-image-sm, .text-lg, .title-lg, #Youtube, .iframe-container iframe, #Twitch, #aboutmebox, #TwitchImage{
+            .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .media-image-lg, .media-image-sm, .text-lg, .title-lg, #Youtube, .iframe-container iframe, #Twitch, #aboutmebox, #TwitchImage, #Instagram{
                 float: left;
             }
             .col-lg-1 {
@@ -230,6 +235,9 @@
             #TwitchImage{
                 padding-top: 3.5%;
             }
+            #Instagram{
+                width: 100%;
+            }
         }
 
     </style>
@@ -239,9 +247,9 @@
     <div id="headerbox" style="border-bottom: 5px #076fa0c5 solid;"> 
         <a href="#Youtube" class="Youtube animation"><div><logo class="logo sizechange">Youtube</logo></div></a>
         <a href="#Twitch" class="Twitch animation"><div><logo class="logo sizechange">Twitch</logo></div></a>
-        <a href="#Instagram" class="Instagram animation"><div><logo class="logo sizechange">Instagram</logo></div></a>
+        <a href="#Instagram" class="Discord animation"><div><logo class="logo sizechange">Discord</logo></div></a>
         <a href="#Email" class="Email animation"><div><logo class="logo sizechange">Email</logo></div></a>
-        <a href="#Discord" class="Discord animation"><div><logo class="logo sizechange">Discord</logo></div></a>
+        <a href="#Donation" class="Donation animation"><div><logo class="logo sizechange">Donations</logo></div></a>
     </div>
 
     <div id="aboutmebox">
@@ -264,13 +272,26 @@
         <div class= "col-sm-6 col-lg-6 text-sm text-lg" style="padding-left: 8.33%;"><p style="text-align: left;">Streaming... STREAMING....? Of COURSE I stream! You can check me out on Twitch! I stream Minecraft, Roblox, Indie games, and many more catagories. Check out my schedule at either my Discord or Twitch page!</p></div>
         <div class="col-sm-2 col-lg-2" style="padding-left: 8.33%;" id="TwitchImage"><a href="https://www.twitch.tv/angelicaaalive" target="_blank" title="Link to Twitch"><img src="Lion.png" width="225px" height="auto" alt="Picture of Twitch"></a></div>
     </div>
-    <div id="Instagram">
+    <div id="Instagram" style="padding-top: 20%; width: 100%;">
+        <div class="col-lg-4 title-lg media-image-lg" style="padding-left: 8.33%;"><h2>TikTok</h2></div>
+        <div class="col-lg-4 title-lg media-image-lg" style="padding-left: 16.66%;"><h2>Discord</h2></div>
+        <div class="col-lg-4 text-lg media-image-lg" style="padding-left: 8.33%;">I have a TikTok as well! There are a lot of funny minecraft skits and shorts on there (and maybe if you are lucky you might also see my cat Aurora...)</div>
+        <div class="col-lg-4 text-lg media-image-lg" style="padding-left: 16.66%;">I will be hosting giveaways and such in the future, but for now just join for stream notifications and if you'd like to chat with me sometime in a VC :) Make sure to read the rules!</div>
+        <div class="col-lg-4 media-image-lg" style="padding-left:8.33%; padding-top: 5%;"><a href="https://www.tiktok.com/@angelicaaalive?" target="_blank" title="Link to TikTok"><img src="TikTokLogo.png" width="250px" height="auto" alt="TikTok Logo"></a></div>
+        <div class="col-lg-4 media-image-lg" style="padding-left:16.66%; padding-top: 7%;"><a href="https://discord.com/invite/jcgr3eAdS4" target="_blank" title="Link to Discord"><img src="DiscordLogo.png" width="250px" height="auto" alt="Discord Logo"></a></div>
+        <!-- This is a divider. The top is the code for the text when it is in the 'large' pixel range and the bottom is the code when it is in the 'small' pixel range-->
+        <div class="col-sm-10 title-sm media-image-sm" style="padding-left:8.33%;"><h2>TikTok</h2></div>
+        <div class="col-sm-10 text-sm media-image-sm" style="padding-left:8.33%;">I have a TikTok as well! There are a lot of funny minecraft skits and shorts on there (and maybe if you are lucky you might also see my cat Aurora...)</div>
+        <div class="col-sm-10 media-image-sm" style="padding-left: 8.33%; padding-top: 4%;"><a href="https://www.tiktok.com/@angelicaaalive?" target="_blank" title="Link to TikTok"><img src="TikTokLogo.png" width="150px" height="auto" alt="TikTok Logo"></a></div>
+        <div class="col-sm-10 media-image-sm title-sm" style="padding-left:8.33%; padding-top: 8.33%;"><h2>Discord</h2></div>
+        <div class="col-sm-10 media-image-sm text-sm" style="padding-left:8.33%;">I will be hosting giveaways and such in the future, but for now just join for stream notifications and if you'd like to chat with me sometime in a VC :) Make sure to read the rules!</div>
+        <div class="col-sm-10 media-image-sm" style="padding-left: 8.33%; padding-top: 4%;"><a href="https://discord.com/invite/jcgr3eAdS4" target="_blank" title="Link to Discord"><img src="DiscordLogo.png" width="150px" height="auto" alt="Discord Logo"></a></div>
+        
+    </div>
+    <div id="Email">
 
     </div>
-    <div id="Discord">
-
-    </div>
-    <div id="Mail">
+    <div id="Donation">
 
     </div>
 
