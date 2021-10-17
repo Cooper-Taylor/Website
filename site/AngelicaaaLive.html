@@ -5,6 +5,7 @@
     <meta name="_viewport_" content="Width=device-width, initial-scale=1">
     <title>AngelicaaaLive</title>
     <link href="Stylesheet.css" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     <style>
         /* Color Palatte:
             FFCF70 (light skin tone)
@@ -265,8 +266,31 @@
     <div id="Youtube">
         <div class= "col-sm-12 col-lg-12 title-sm title-lg"><h2 style="padding-bottom: 2.5%;">Check out my Youtube!</h2> </div>
         <div class= "col-sm-10 col-lg-10 text-sm text-lg"><p style="padding-left: 16.66%;">I am getting ready to release videos&nbsp;on Youtube as well as posting popular Twitch streams onto the channel! Go check it out! </p></div>
-        <div class="iframe-container"><iframe class="youtube-player" type="text/html" height="315" width="560" src="https://www.youtube.com/embed/videoseries?list=UUc7Y8CFp27CocYRDIqoQ2Xg" frameborder="0" allowfullscreen></iframe></div>
-        <div class="iframe-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=UUc7Y8CFp27CocYRDIqoQ2Xg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="iframe-container">
+            <iframe class="latestVideoEmbed" vnum='0' cid="UCc7Y8CFp27CocYRDIqoQ2Xg" width="600" height="340" frameborder="0" allowfullscreen></iframe>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <script>
+            var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
+            function loadVideo(iframe) {
+            $.getJSON(reqURL + iframe.getAttribute('cid'),
+                function(data) {
+                var videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
+                console.log(videoNumber);
+                var link = data.items[videoNumber].link;
+                id = link.substr(link.indexOf("=") + 1);
+                iframe.setAttribute("src", "https://youtube.com/embed/" + id + "?controls=0&autoplay=0");
+                }
+            );
+            }
+            var iframes = document.getElementsByClassName('latestVideoEmbed');
+            for (var i = 0, len = iframes.length; i < len; i++) {
+            loadVideo(iframes[i]);
+            }
+            </script>
+        </div>
+
+
+
     </div>
     <div id="Twitch">
         <div class= "col-sm-6 col-lg-6 title-sm title-lg"><h2 style="padding-bottom: 2.5%; padding-left: 8.33%; padding-top: 40%;">Streaming?</h2></div>
